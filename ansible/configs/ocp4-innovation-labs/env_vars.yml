@@ -5,7 +5,7 @@
 ### Common Host settings
 # RHSM settings
 rhsm_force_register: true
-repos_params: {{ rhel_repos }}
+#repos_params: {{ rhel_repos }}
 
 #If using repo_method: satellite, you must set these values as well.
 # satellite_url: satellite.example.com

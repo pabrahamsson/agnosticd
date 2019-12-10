@@ -35,10 +35,19 @@
   tags:
   - step004
   - common_tasks
-  roles:
-  - { role: "./configs/{{ env_type }}/roles/infra-ansible/roles/rhsm" }
-  - { role: "common",                 when: 'install_common | bool' }
-  - { role: "set_env_authorized_key", when: 'set_env_authorized_key | bool' }
+    #roles:
+    #- { role: 'config/{{ env_type }}/roles/infra-ansible/roles/rhsm' }
+    #- { role: "common",                 when: 'install_common | bool' }
+    #- { role: "set_env_authorized_key", when: 'set_env_authorized_key | bool' }
+  tasks:
+  - include_role:
+      name: 'config/{{ env_type }}/roles/infra-ansible/roles/rhsm'
+  - include_role:
+      name: common
+    when: 'install_common | bool'
+  - include_role:
+      name: set_env_authorized_key
+    when: 'set_env_authorized_key | bool'
 
 - name: Configuring Bastion Hosts
   hosts: bastions
