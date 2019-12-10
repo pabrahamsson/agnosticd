@@ -41,7 +41,7 @@
     #- { role: "set_env_authorized_key", when: 'set_env_authorized_key | bool' }
   tasks:
   - include_role:
-      name: 'config/{{ env_type }}/roles/infra-ansible/roles/rhsm'
+      name: 'infra-ansible/roles/rhsm'
   - include_role:
       name: common
     when: 'install_common | bool'
