@@ -30,7 +30,7 @@ install_student_user: false
 install_ftl: false
 
 # install openshift python modules on bastion
-install_k8s_modules: true
+#install_k8s_modules: true
 
 ## Automatically deploy ocp4 cluster using the installer
 # Next Settings for released versions of OpenShift
