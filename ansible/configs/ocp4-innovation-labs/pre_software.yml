@@ -35,10 +35,6 @@
   tags:
   - step004
   - common_tasks
-    #roles:
-    #- { role: 'config/{{ env_type }}/roles/infra-ansible/roles/rhsm' }
-    #- { role: "common",                 when: 'install_common | bool' }
-    #- { role: "set_env_authorized_key", when: 'set_env_authorized_key | bool' }
   tasks:
   - include_role:
       name: 'infra-ansible/roles/rhsm'
